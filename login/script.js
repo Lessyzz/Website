@@ -1,18 +1,15 @@
-const loginForm = document.getElementById('login-form');
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password');
+const form = document.getElementById('login-form');
 
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const username = usernameInput.value;
-    const password = passwordInput.value;
+form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent form submission
 
-    // Here, you can implement your login logic, such as sending a request to a server
-    // or checking the username and password against a local database.
-    // For this example, we'll just log the values to the console.
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Perform login logic here
     console.log('Username:', username);
     console.log('Password:', password);
 
-    // Reset the form after submission
-    loginForm.reset();
+    // Reset form fields
+    form.reset();
 });
