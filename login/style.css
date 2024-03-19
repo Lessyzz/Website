@@ -1,10 +1,11 @@
 /* Colors */
 :root {
     --text: #0d0c0e;
-    --background: #f2f2f7;
-    --primary: #504ac4;
-    --secondary: #d8d6f8;
+    --background: #dddddd;
+    --primary: blue;
+    --secondary: rgb(199, 199, 199);
     --accent: #534afc;
+    --border: #8c87ed;
     --success: #69ff03;
     --error: #ff3d3d;
 }
@@ -26,15 +27,14 @@ body {
     max-width: 400px;
     padding: 20px;
     background-color: var(--secondary);
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    /*color: var(--primary);*/
+    color: var(--primary);
     text-align: center;
-    color: blue;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
 }
 
 .success {
@@ -65,7 +65,7 @@ label {
 input {
     margin-top: 5px;
     padding: 10px;
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--border);
     border-radius: 3px;
     font-size: 16px;
     width: 100%;
@@ -76,8 +76,7 @@ input {
 button {
     margin-top: 20px;
     padding: 10px 20px;
-    /*background-color: var(--primary);*/
-    background-color: blue;
+    background-color: var(--primary);
     color: white;
     border: none;
     border-radius: 3px;
