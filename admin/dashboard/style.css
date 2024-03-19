@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --background: #d1d1d1;
+    --primary: #fff;
+    --sidebar: rgb(41, 41, 255);
+    --li: #3d3d3d;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    background-color: var(--background);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.sidebar {
+    width: 200px;
+    background-color: var(--sidebar);
+    color: var(--primary);
+    padding: 20px;
+    position: relative;
+    height: 100%;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    margin-top: 5px;
+    display: block;
+    padding: 10px;
+    color: var(--primary);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+}
+
+nav ul li a:hover {
+    background-color: var(--background);
+    color: var(--li);
+}
+
+nav ul li a.active {
+    background-color: var(--background);
+    color: var(--li);
+}
+
+.main-content {
+    padding: 15px;
+    flex-grow: 1;
+    position: relative;
+}
+
+.dashboard {
+    max-width: 800px;
+    color: var(--sidebar);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.stat-card {
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--background);
+    border: 1px solid var(--sidebar);
+    color: var(--sidebar);
+}
+
+.stat-card .count {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.chart-container {
+    background-color: var(--sidebar);
+    padding: 20px;
+    border-radius: 5px;
+    color: var(--primary);
+}
+
+.status-indicators {
+    margin-top: 40px;
+    color: var(--sidebar);
+}
+
+.indicator-row {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.indicator-card {
+    background-color: var(--sidebar);
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    width: 48%;
+    color: var(--primary);
+}
+
+.indicator-card .value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.status-indicator.up {
+    background-color: green;
+}
+
+.status-indicator.down {
+    background-color: red;
+}
+
+.status-indicator.neutral {
+    background-color: yellow;
+}
