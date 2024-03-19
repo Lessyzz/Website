@@ -1,9 +1,9 @@
 /* Colors */
 :root {
     --text: #0d0c0e;
-    --background: #f2f2f7;
-    --primary: #504ac4;
-    --secondary: #d8d6f8;
+    --background: #d4d4d4;
+    --primary: blue;
+    --secondary: rgb(199, 199, 199);
     --accent: #534afc;
 }
 
@@ -24,7 +24,7 @@ body {
     max-width: 600px;
     padding: 20px;
     background-color: var(--secondary);
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
 }
@@ -32,25 +32,9 @@ body {
 h1 {
     text-align: center;
     color: var(--primary);
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
-.user-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.profile-picture {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-#username {
-    font-weight: bold;
-}
 
 /* Form Styles */
 form {
@@ -60,7 +44,7 @@ form {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 100%;
 }
 
@@ -71,6 +55,7 @@ label {
 
 input,
 textarea {
+    margin-top: 10px;
     padding: 10px;
     border: 1px solid var(--secondary);
     border-radius: 5px;
@@ -112,7 +97,6 @@ button:hover {
     flex-wrap: wrap;
     border-radius: 5px;
 }
-
 
 #success-overlay.toggle {
     display: flex;

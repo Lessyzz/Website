@@ -11,21 +11,17 @@
 <body>
     <div class="container">
         <h1>Destek Bileti Gönderin</h1>
-        <div class="user-info">
-            <img src="https://thispersondoesnotexist.com/" alt="Profile Picture" class="profile-picture">
-            <span id="username"></span>
-        </div>
         <form id="support-form" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="subject">Problem nedir</label>
+                <label for="subject">Konu</label>
                 <input type="text" id="subject" name="subject" required>
             </div>
             <div class="form-group">
-                <label for="message">Daha detaylı açıklayın</label>
+                <label for="message">Açıklama</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
             </div>
             <div class="form-group">
-                <label for="problem-picture">Problem Görüntüsü</label>
+                <label for="problem-picture">Ek Dosyalar</label>
                 <input type="file" id="problem-picture" name="problem-picture" accept="image/*">
             </div>
             <button type="submit">Gönder</button>

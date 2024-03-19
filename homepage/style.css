@@ -1,10 +1,11 @@
 /* Colors */
 :root {
     --text: #0d0c0e;
-    --background: #dddddd;
+    --background: #d4d4d4;
     --primary: #504ac4;
     --secondary: #8c87ed;
     --accent: #534afc;
+    --hover: blue;
 }
 
 /* General Styles */
@@ -100,4 +101,8 @@ button:hover {
 a {
     color: var(--primary);
     text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover);
 }
