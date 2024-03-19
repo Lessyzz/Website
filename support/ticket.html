@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destek Sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {    
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        main {
+            padding: 20px 0;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        button.accordion {
+            background-color: #1f1f1f;
+            color: #fff;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        button.accordion:hover {
+            background-color: #333;
+        }
+
+        .panel {
+            display: none;
+            background-color: #f1f1f1;
+            padding: 18px;
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        button.accordion.active {
+            background-color: #333;
+        }
+
+        button.accordion.active:hover {
+            background-color: #555;
+        }
+
+        button.accordion.active + .panel {
+            display: block;
+        }
+#contact {
+    width: 50%; /* Formun genişliğini ayarla */
+    margin: 0 auto; /* Sayfa genişliğinde ortalamak için margin kullan */
+}
+
+#contact h2 {
+    text-align: center;
+}
+
+#contact form {
+    text-align: center; /* Form elemanlarını ortalamak için metni merkeze al */
+}
+
+#contact form label {
+    display: block; /* Etiketleri blok olarak görüntüle */
+    margin-bottom: 10px; /* Etiketler arası boşluk bırak */
+}
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+    width: 100%; /* Giriş alanlarının genişliğini ayarla */
+    padding: 8px; /* Dolgu ekle */
+    margin-bottom: 10px; /* Giriş alanları arası boşluk bırak */
+    box-sizing: border-box; /* Padding ve border'ı genişlik hesabına dahil et */
+}
+
+#contact form button {
+    background-color: #007bff; /* Arkaplan rengi */
+    color: #fff; /* Yazı rengi */
+    border: none; /* Kenarlık yok */
+    padding: 10px 20px; /* Dolgu ekle */
+    cursor: pointer; /* İmleci el işareti yap */
+    border-radius: 4px; /* Köşeleri yuvarla */
+}
+
+#contact form button:hover {
+    background-color: #0056b3; /* Hover rengi */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>DESTEK SAYFASI</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section id="faq">
+                <h2>Sıkça Sorulan Sorular</h2>
+                <ul>
+                    <li>
+                        <button class="accordion">Soruları aç/kapat</button>
+                        <div class="panel">
+                            <p>SSS 1 cevabı buraya gelecek.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="accordion">Soruları aç/kapat</button>
+                        <div class="panel">
+                            <p>SSS 2 cevabı buraya gelecek.</p>
+                        </div>
+                    </li>
+                    <!-- Daha fazla SSS ekleyebilirsiniz -->
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>Bize Ulaşın</h2>
+                <form action="#" method="POST">
+                    <label for="username">Kullanıcı Adı:</label>
+                    <input type="text" id="username" name="username" required>
+                    
+                    <label for="email">E-posta:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="subject">Konu:</label>
+                    <input type="text" id="subject" name="subject" required>
+                    
+                    <label for="message">Mesajınız:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Gönder</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 	Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var acc = document.querySelectorAll('.accordion');
+
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener('click', function() {
+            this.classList.toggle('active');
+            var panel = this.nextElementSibling;
+            if (panel.style.display === 'block') {
+                panel.style.display = 'none';
+            } else {
+                panel.style.display = 'block';
+            }
+        });
+    }
+});
+    </script>
+</body>
+</html>
