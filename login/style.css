@@ -5,6 +5,8 @@
     --primary: #5f9e4c;
     --secondary: #305964;
     --accent: #3a4f78;
+    --success: #69ff03;
+    --error: #ff3d3d;
 }
 
 /* General Styles */
@@ -29,9 +31,16 @@ body {
 }
 
 h1 {
-    text-align: center;
     color: var(--primary);
     margin-bottom: 30px;
+}
+
+.success {
+    color: var(--success);
+}
+
+.error {
+    color: var(--error);
 }
 
 /* Form Styles */

@@ -10,6 +10,7 @@ usernameElement.textContent = loggedInUser.name;
 
 // Form submission handling
 const form = document.getElementById('support-form');
+const successOverlay = document.getElementById('success-overlay');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault(); // Prevent form submission
@@ -24,6 +25,7 @@ form.addEventListener('submit', (event) => {
     // Send data to server or perform any other desired action
     console.log('Support Ticket Data:', data);
 
-    // Reset form fields
-    form.reset();
+    // Show success overlay
+    successOverlay.classList.add("toggle")
+
 });

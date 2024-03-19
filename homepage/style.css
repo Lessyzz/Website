@@ -85,9 +85,7 @@ h2 {
 
 button {
     padding: 5px 10px;
-    font-size: x-large;
     background-color: var(--primary);
-    color: var(--text);
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -96,4 +94,10 @@ button {
 
 button:hover {
     background-color: var(--secondary);
+}
+
+button>a {
+    font-size: x-large;
+    color: var(--text);
+    text-decoration: none;
 }
