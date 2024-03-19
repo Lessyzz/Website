@@ -25,13 +25,16 @@ body {
 .container {
     max-width: 400px;
     padding: 20px;
-    background-color: var(--secondary);
+    /*background-color: var(--secondary);*/
+    background-color: rgb(199, 199, 199);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: var(--primary);
+    /*color: var(--primary);*/
+    text-align: center;
+    color: blue;
     margin-bottom: 30px;
 }
 
@@ -61,6 +64,7 @@ label {
 }
 
 input {
+    margin-top: 5px;
     padding: 10px;
     border: 1px solid var(--secondary);
     border-radius: 3px;
@@ -71,8 +75,10 @@ input {
 }
 
 button {
+    margin-top: 20px;
     padding: 10px 20px;
-    background-color: var(--primary);
+    /*background-color: var(--primary);*/
+    background-color: blue;
     color: white;
     border: none;
     border-radius: 3px;
