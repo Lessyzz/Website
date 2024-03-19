@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Ticket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Destek Bileti Gönderin</h1>
+        <div class="user-info">
+            <img src="https://thispersondoesnotexist.com/" alt="Profile Picture" class="profile-picture">
+            <span id="username"></span>
+        </div>
+        <form id="support-form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="subject">Problem nedir</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Daha detaylı açıklayın</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="problem-picture">Problem Görüntüsü</label>
+                <input type="file" id="problem-picture" name="problem-picture" accept="image/*">
+            </div>
+            <div class="form-group">
+                <button type="submit">Gönder</button>
+            </div>
+        </form>
+        <div id="success-overlay">
+            <svg viewBox="0 0 1024 1024">
+                <path
+                    d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm-55.808 536.384-99.52-99.584a38.4 38.4 0 1 0-54.336 54.336l126.72 126.72a38.272 38.272 0 0 0 54.336 0l262.4-262.464a38.4 38.4 0 1 0-54.272-54.336L456.192 600.384z" />
+            </svg>
+            <h2>Destek biletiniz başarıyla gönderildi.</h2>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

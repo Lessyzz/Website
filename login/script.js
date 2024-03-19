@@ -1,18 +1,32 @@
-const loginForm = document.getElementById('login-form');
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password');
+const form = document.getElementById('login-form');
+const message = document.getElementById('message');
 
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const username = usernameInput.value;
-    const password = passwordInput.value;
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
-    // Here, you can implement your login logic, such as sending a request to a server
-    // or checking the username and password against a local database.
-    // For this example, we'll just log the values to the console.
-    console.log('Username:', username);
-    console.log('Password:', password);
+    const loggedInUser = authUser(username, password);
 
-    // Reset the form after submission
-    loginForm.reset();
+    if (loggedInUser) {
+        message.textContent = `Hoşgeldiniz, ${loggedInUser}!`;
+        message.classList.remove('error');
+        message.classList.add('success');
+    } else {
+        message.textContent = 'Kullanıcı adı veya parola yanlış!';
+        message.classList.remove('success');
+        message.classList.add('error');
+    }
 });
+
+function authUser(username, password) {
+    // Here, you would typically check the username and password against a database or API
+    // For this example, let's assume that the correct credentials are "admin" for both username and password
+    if (username === 'admin' && password === 'admin') {
+        setTimeout(() => {
+            window.location.href = "../ticket-form/index.html";
+        }, 3000);
+        return 'Admin User';
+    }
+    return null;
+}
