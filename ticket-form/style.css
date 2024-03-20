@@ -68,6 +68,10 @@ textarea {
     resize: vertical;
 }
 
+#problem-picture {
+    padding: 0;
+}
+
 button {
     padding: 10px 20px;
     background-color: var(--primary);
